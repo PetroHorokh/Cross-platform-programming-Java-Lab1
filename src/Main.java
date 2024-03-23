@@ -8,14 +8,20 @@ public class Main {
 
         double A, B, C;
 
-        System.out.print("Введіть довжину ребра A: ");
-        A = scanner.nextDouble();
+        do{
+            System.out.print("Введіть довжину ребра A: ");
+            A = scanner.nextDouble();
+        }while(A <= 0);
 
-        System.out.print("Введіть довжину ребра B: ");
-        B = scanner.nextDouble();
+        do {
+            System.out.print("Введіть довжину ребра B: ");
+            B = scanner.nextDouble();
+        }while(B <= 0);
 
-        System.out.print("Введіть довжину ребра C: ");
-        C = scanner.nextDouble();
+        do {
+            System.out.print("Введіть довжину ребра C: ");
+            C = scanner.nextDouble();
+        }while(C <= 0);
 
         double volume = A * B * C;
         System.out.println("Об'єм прямокутного паралелепіпеда: " + volume);
@@ -30,8 +36,10 @@ public class Main {
 
         int number;
 
-        System.out.print("Введіть чотирицифрове натуральне число: ");
-        number = scanner.nextInt();
+        do {
+            System.out.print("Введіть чотирицифрове натуральне число: ");
+            number = scanner.nextInt();
+        }while(Integer.toString(Math.abs(number)).length() != 4 );
 
         int firstDigit = number / 1000;
         int fourthDigit = number % 10;
