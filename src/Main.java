@@ -39,7 +39,7 @@ public class Main {
         do {
             System.out.print("Введіть чотирицифрове натуральне число: ");
             number = scanner.nextInt();
-        }while(Integer.toString(Math.abs(number)).length() != 4 );
+        }while(number < 0 && Integer.toString(Math.abs(number)).length() != 4 );
 
         int firstDigit = number / 1000;
         int fourthDigit = number % 10;
